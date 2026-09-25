@@ -6,7 +6,7 @@
 /*   By: werlim <werlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 13:37:21 by werlim            #+#    #+#             */
-/*   Updated: 2026/09/26 04:23:31 by werlim           ###   ########.fr       */
+/*   Updated: 2026/09/26 04:32:00 by werlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,6 @@
 
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
-
-/* Operations - Swap */
-void	op_swap(t_node **node);
-void	op_sa(t_ps *ps);
-void	op_sb(t_ps *ps);
-void	op_ss(t_ps *ps);
-
-/* Operations - Push */
-int		op_push(t_node **src, t_node **dest);
-void	op_pa(t_ps *ps);
-void	op_pb(t_ps *ps);
-
-/* Operations - Rotate */
-void	op_rotate(t_node **node);
-void	op_ra(t_ps *ps);
-void	op_rb(t_ps *ps);
-void	op_rr(t_ps *ps);
-void	op_rrotate(t_node **node);
-void	op_rra(t_ps *ps);
-void	op_rrb(t_ps *ps);
-void	op_rrr(t_ps *ps);
-
-/* Linked List Helper Functions */
-t_node	*ftps_ndnew(int data, int rank);
-t_node	*ftps_ndlast(t_node *node);
-void	ftps_ndaddlast(t_node **node, t_node *new);
-void	ftps_ndclear(t_node **node);
 
 typedef struct s_node
 {
@@ -74,5 +47,32 @@ typedef struct s_ps
 	int		size_b;
 	int		counter[OP_NUM];
 }	t_ps;
+
+/* Operations - Swap */
+void	op_swap(t_node **node);
+void	op_sa(t_ps *ps);
+void	op_sb(t_ps *ps);
+void	op_ss(t_ps *ps);
+
+/* Operations - Push */
+int		op_push(t_node **src, t_node **dest);
+void	op_pa(t_ps *ps);
+void	op_pb(t_ps *ps);
+
+/* Operations - Rotate */
+void	op_rotate(t_node **node);
+void	op_ra(t_ps *ps);
+void	op_rb(t_ps *ps);
+void	op_rr(t_ps *ps);
+void	op_rrotate(t_node **node);
+void	op_rra(t_ps *ps);
+void	op_rrb(t_ps *ps);
+void	op_rrr(t_ps *ps);
+
+/* Linked List Helper Functions */
+t_node	*ftps_ndnew(int data, int rank);
+t_node	*ftps_ndlast(t_node *node);
+void	ftps_ndaddlast(t_node **node, t_node *new);
+void	ftps_ndclear(t_node **node);
 
 #endif
