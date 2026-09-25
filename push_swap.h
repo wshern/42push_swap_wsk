@@ -6,7 +6,7 @@
 /*   By: werlim <werlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 13:37:21 by werlim            #+#    #+#             */
-/*   Updated: 2026/09/26 03:35:05 by werlim           ###   ########.fr       */
+/*   Updated: 2026/09/26 04:23:31 by werlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ void	op_rotate(t_node **node);
 void	op_ra(t_ps *ps);
 void	op_rb(t_ps *ps);
 void	op_rr(t_ps *ps);
+void	op_rrotate(t_node **node);
+void	op_rra(t_ps *ps);
+void	op_rrb(t_ps *ps);
+void	op_rrr(t_ps *ps);
 
 /* Linked List Helper Functions */
 t_node	*ftps_ndnew(int data, int rank);
