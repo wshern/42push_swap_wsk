@@ -6,7 +6,7 @@
 /*   By: werlim <werlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 13:37:21 by werlim            #+#    #+#             */
-/*   Updated: 2026/09/24 15:12:45 by werlim           ###   ########.fr       */
+/*   Updated: 2026/09/25 20:53:06 by werlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
+
+/* Operations - Swap */
+void	op_swap(t_node **node);
+void	op_sa(t_ps *ps);
+void	op_sb(t_ps *ps);
+void	op_ss(t_ps *ps);
+
+/* Linked List Helper Functions */
+t_node	*ftps_ndnew(int data, int rank);
+t_node	*ftps_ndlast(t_node *node);
+void	ftps_ndaddlast(t_node **node, t_node *new);
+void	ftps_ndclear(t_node **node);
 
 typedef struct s_node
 {
@@ -36,17 +48,16 @@ typedef enum e_op
 	OP_RRA,
 	OP_RRB,
 	OP_RRR,
-	OP_COUNT
+	OP_NUM
 }	t_op;
 
-typedef struct s_context
+typedef struct s_ps
 {
 	t_node	*a;
 	t_node	*b;
 	int		size_a;
 	int		size_b;
-	int		counts[OP_COUNT];
-	int		print;
-}	t_context;
+	int		counter[OP_NUM];
+}	t_ps;
 
 #endif
